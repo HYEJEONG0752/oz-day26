@@ -28,9 +28,9 @@
     const day = 'Monday';
     const weather = 'sunny';
 
-    const message = `Today is ${day} and the weater is ${weather}.`;
+    const message = `Today is ${day} and the weather is ${weather}.`;
 
-    console.log(message);   // Today is Monday and the weater is sunny.
+    console.log(message);   // Today is Monday and the weather is sunny.
 
 // 4. 객체 디스트럭처링 활용하기
     const user = {
