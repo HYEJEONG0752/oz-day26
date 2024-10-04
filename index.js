@@ -76,18 +76,12 @@
 
 // 7. 제너레이터를 이용한 이터러블 객체 생성 : 1에서 5까지 숫자를 순환하는 이터러블 객체 생성, for...of 루프로 출력하기
     function* numberGenerator() {
-        yield 1;
-        yield 2;
-        yield 3;
-        yield 4;
-        yield 5;
+        yield* [1, 2, 3, 4, 5];
     }
 
-    (async () => {
-        for await (const number of numberGenerator()) {
-            console.log(number);
-        }
-    })();
+    for(const number of numberGenerator()) {
+        console.log(number);
+    }
 
 // 8. 심볼을 이용한 객체의 비공개 프로퍼티
     const idSymbol = Symbol('id');
